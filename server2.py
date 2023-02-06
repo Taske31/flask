@@ -1,4 +1,4 @@
-from flask import Flask, url_for
+from flask import Flask, url_for, render_template
 
 app = Flask(__name__)
 
@@ -39,19 +39,7 @@ def image_mars():
 
 @app.route('/astronaut_selection')
 def astronaut_selection():
-    return f"""<!doctype html>
-                <html lang="en">
-                  <head>
-                    <meta charset="utf-8">
-                    <link rel="stylesheet" href="{url_for('static', filename='css/bootstrap.css')}" />
-                    <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}" />
-                    <title>Отбор астронавтов</title>
-                  </head>
-                  <body>
-                    <h1>Анкета претендента</h1>
-                    <h3>на участие в миссии</h3>  
-                  </body>
-                </html>"""
+    return render_template('astronaut_selection.html')
 
 
 if __name__ == '__main__':
