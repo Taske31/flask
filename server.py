@@ -5,7 +5,7 @@ app = Flask(__name__)
 title = 'Заготовка'
 
 
-@app.route('/form_sample', methods=['POST', 'GET'])
+@app.route('/')
 def form_sample():
     if request.method == 'GET':
         return f'''<!doctype html>

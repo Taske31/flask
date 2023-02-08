@@ -9,11 +9,61 @@
 <body>
     <h1>Анкета претендента</h1>
     <h3>на участие в миссии</h3>
-    <div class="form">
+    <form class="form">
         <input type="text" placeholder="Введите фамилию" name="second_name"><br>
-        <input type="text" placeholder="Введите имя" name="name">
-
-    </div>
+        <input type="text" placeholder="Введите имя" name="name"><br>
+        <br>
+        <input type="email" placeholder="Введиите адрес почты" name="email"><br>
+        <div>
+            <label for="classSelect">Какое у Вас образование?</label><br>
+            <select id="classSelect" name="class">
+                <option>Начальное</option>
+                <option>Среднее</option>
+                <option>Бакалавриат</option>
+                <option>Магистратура</option>
+                <option>Аспирантура</option>
+            </select>
+        </div>
+        <div>
+            <p>Какие у Вас есть профессии?</p>
+            <input type="checkbox" id="checkbox1">
+            <label  for="checkbox1">Инженер-исследователь</label><br>
+            <input type="checkbox" id="checkbox2">
+            <label  for="checkbox2">Инженер-строитель</label><br>
+            <input type="checkbox" id="checkbox3">
+            <label  for="checkbox3">Пилот</label><br>
+            <input type="checkbox" id="checkbox4">
+            <label  for="checkbox4">Метеорлог</label><br>
+            <input type="checkbox" id="checkbox5">
+            <label  for="checkbox5">Инженер по жизнеобеспечению</label><br>
+            <input type="checkbox" id="checkbox6">
+            <label  for="checkbox6">Инженер по радиационной защите</label><br>
+            <input type="checkbox" id="checkbox7">
+            <label  for="checkbox7">Врач</label><br>
+            <input type="checkbox" id="checkbox8">
+            <label  for="checkbox8">Экзобиолог</label><br>
+        </div>
+        <div>
+            <p>Укажите пол</p><br>
+            <input type="radio" name="female" id="female" value="female">
+            <label for="female">Мужской</label>
+            <input type="radio" name="male" id="male" value="female">
+            <label for="male">Женский</label>
+        </div>
+        <div>
+            <label for="about">Почему Вы хотите принять участие в миссии?</label>
+            <textarea id="about" rows="3" name="about"></textarea>
+        </div>
+        <div>
+            <label for="photo">Приложите фотографию</label>
+            <input type="file" id="photo" name="file">
+        </div>
+        <div>
+            <input type="checkbox" class="form-check-input" id="acceptRules" name="accept">
+            <label class="form-check-label" for="acceptRules">Готовы остаться на Марсе?</label>
+        </div>
+        <button type="submit" class="btn_send">Отправить</button>
+    </form>
 
 </body>
 </html>
