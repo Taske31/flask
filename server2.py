@@ -41,6 +41,18 @@ def image_mars():
 def astronaut_selection():
     return render_template('astronaut_selection.html')
 
+@app.route('/training/<profession>')
+def training(profession):
+    if 'инженер' in profession or 'строитель' in profession:
+        return render_template('training.html', training='Инженерные тренажеры')
+    elif 'врач' in profession:
+        return render_template('training.html', training='Научные симуляторы')
+    elif 'пилот' in profession:
+        return render_template('training.html', training='Летательный симулятор')
+    elif 'олог' in profession:
+        return render_template('training.html', training='Научная лаборотория')
+    else:
+        return render_template('training.html', training='Нам не удалось найти\nдля вас тренажер')
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
