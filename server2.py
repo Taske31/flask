@@ -60,6 +60,23 @@ def list_prog(table):
     print(1)
     return render_template('list_prof.html', table=table)
 
+
+@app.route('/auto_answer')
+@app.route('/answer')
+def answer():
+    params = {
+        'title': 'test',
+        'surname': 'Watny',
+        'name': 'Mark',
+        'education': 'Выше среднего',
+        'profession': 'штурман марсохода',
+        'sex': 'male',
+        'motivation': 'всегда мечтал застрять на Марсе!',
+        'ready': 'True'
+    }
+    return render_template('auto_answer.html', params=params)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
 
