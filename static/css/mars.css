@@ -9,3 +9,9 @@ h2 {
     border-right: 50px solid transparent;
     border-top: 100px solid #79849B;
 }
+.subtitle{
+    margin-left: 1%
+}
+.container{
+    margin-left: 0%
+}

@@ -54,6 +54,12 @@ def training(profession):
     else:
         return render_template('training.html', training='Нам не удалось найти\nдля вас тренажер')
 
+
+@app.route('/list_prof/<table>')
+def list_prog(table):
+    print(1)
+    return render_template('list_prof.html', table=table)
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
 
